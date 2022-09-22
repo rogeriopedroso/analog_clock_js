@@ -1,107 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <main>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 220 220"
-      >
-        <style>
-          text {
-            font-family: Courier New;
-            font-weight: bold;
-            user-select: none;
-          }
-        </style>
+    <title>Analog Clock by Rogerio Pedroso</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
 
-        <g transform="translate(110,110)">
-          <!-- tick -->
-          <g>
-            <circle
-              r="108"
-              class="x-clock-circle"
-              fill="none"
-              stroke-width="4"
-              stroke="gray"
+<body>
+    <header>
+        <div class="header-logo">
+            <h1 class="content">My First Analog Clock</h1>
+            <a target="_blank" href="https://github.com/rogeriopedroso/analog_clock_js" class="content-link">Visit my GuitHub</a
+        >
+      </div>
+    </header>
+    <main class="main">
+      <div class="clockbox">
+        <svg
+          id="clock"
+          xmlns="http://www.w3.org/2000/svg"
+          width="600"
+          height="600"
+          viewBox="0 0 600 600"
+        >
+          <g id="face">
+            <circle class="circle" cx="300" cy="300" r="253.9" />
+            <path
+              class="hour-marks"
+              d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"
             />
-            <circle
-              r="97"
-              class="x-clock-1-minute"
-              fill="none"
-              stroke-width="11"
-              stroke="black"
-              stroke-dasharray="4 46.789082"
-              transform="rotate(-1.5)"
-            />
-            <circle
-              r="100"
-              class="x-clock-5-minute"
-              fill="none"
-              stroke-width="5"
-              stroke="black"
-              stroke-dasharray="2 8.471976"
-              transform="rotate(-.873)"
-            />
+            <circle class="mid-circle" cx="300" cy="300" r="16.2" />
           </g>
-
-          <!-- hands -->
-          <g id="hands" transform="rotate(180)">
-            <circle class="x-clock-center" r="7" fill="#333" />
-            <g id="hour-hand" tabindex="0">
-              <line
-                class="x-clock-hour-hand"
-                stroke-width="5"
-                y2="70"
-                stroke-linecap="round"
-                stroke="#333"
-              />
-            </g>
-            <g id="minute-hand" tabindex="0">
-              <line
-                class="x-clock-minute-hand"
-                stroke-width="5"
-                y2="85"
-                stroke-linecap="round"
-                stroke="#666"
-              />
-            </g>
-            <g id="second-hand">
-              <line
-                class="x-clock-second-hand"
-                stroke-width="2"
-                y2="95"
-                stroke="#999"
-              />
-            </g>
+          <g id="hour">
+            <path class="hour-arm" d="M300.5 298V142" />
+            <circle class="sizing-box" cx="300" cy="300" r="253.9" />
           </g>
-          <!-- numbers -->
-          <g id="numbers" class="x-clock-numbers">
-            <text x="35" y="-65">1</text>
-            <text x="65" y="-35">2</text>
-            <text x="75" y="5">3</text>
-            <text x="65" y="45">4</text>
-            <text x="35" y="75">5</text>
-            <text x="-5" y="85">6</text>
-            <text x="-45" y="75">7</text>
-            <text x="-75" y="45">8</text>
-            <text x="-85" y="5">9</text>
-            <text x="-75" y="-35">10</text>
-            <text x="-50" y="-65">11</text>
-            <text x="-10" y="-75">12</text>
+          <g id="minute">
+            <path class="minute-arm" d="M300.5 298V67" />
+            <circle class="sizing-box" cx="300" cy="300" r="253.9" />
           </g>
-
-          <g id="digital" class="x-clock-digital">
-            <text id="digital-text" x="-40" y="30"></text>
+          <g id="second">
+            <path class="second-arm" d="M300.5 350V55" />
+            <circle class="sizing-box" cx="300" cy="300" r="253.9" />
           </g>
-        </g>
-      </svg>
+        </svg>
+      </div>
     </main>
+    <script src="./scripts/script.js" defer></script>
   </body>
 </html>

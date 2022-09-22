@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(43, 43, 43);
+}
+
+.header-logo {
+    font-family: "Sedgwick Ave", cursive;
+    height: 150px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+
+.content {
+    color: orange;
+    padding: 35px;
+}
+
+.content-link {
+    color: rgb(238, 175, 59);
+    font-size: 1.5rem;
+}
+
+.content-link:hover {
+    color: azure;
+}
+
+.main {
+    display: flex;
+    padding: 2rem;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+}
+
+.clockbox,
+#clock {
+    width: 100%;
+}
+
+.circle {
+    fill: none;
+    stroke: rgb(231, 214, 214);
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+    box-shadow: 0 -15px 15px rgb(231, 192, 192 0.1), inset 0 15px 15px rgb(0, 0, 0 0.3);
+}
+
+.mid-circle {
+    fill: rgb(248, 244, 7);
+}
+
+.hour-marks {
+    fill: none;
+    stroke: rgb(231, 214, 214);
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: rgb(163, 9, 9);
+    stroke-width: 13;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: rgb(253, 249, 3);
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+    opacity: 70%;
+}
+
+.second-arm {
+    fill: none;
+    stroke: rgb(231, 192, 192);
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+    opacity: 60%;
+}
+
+.sizing-box {
+    fill: none;
+}
+
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    /* transition: transform 0.4s ease-out; */
+}
